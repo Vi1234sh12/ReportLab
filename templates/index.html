@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweets</title>
+</head>
+<body>
+    <h1>Tweets:</h1>
+    <ul>
+        {% for tweet in tweets %}
+        <li>
+            <strong>{{ tweet.userhandle }}</strong>
+            <p>{{ tweet.tweet }}</p>
+            <p>{{ tweet.tweetdate }}</p>
+            <img src="{{ tweet.profile_image }}" alt="Profile Image" width="100">
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
